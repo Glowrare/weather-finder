@@ -28,13 +28,13 @@ searchLog.addEventListener("click", function () {
       weatherTranslation.innerHTML = descValue;
       highTemp.innerHTML = highValue;
       lowTemp.innerHTML = lowValue;
-      locationCountry.innerHTML = countryValue;
+      locationCountry.innerHTML = ` , ${countryValue}`;
       let now = new Date();
       let date = document.querySelector(".date");
       date.innerText = dateBuilder(now);
     })
 
-    .catch((err) => alert("Wrong city name!"));
+    .catch((err) => alert("Oops! Wrong city name 😩😵"));
 });
 
 function dateBuilder(d) {
