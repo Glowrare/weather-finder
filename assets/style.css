@@ -81,6 +81,10 @@ input[type="text"]:focus {
   box-shadow: 1px 7px 1px 0px #e5e5e57a;
 }
 
+::placeholder {
+  color: #decdc3;
+}
+
 input[type="submit"] {
   width: 20%;
   padding: 5px;
@@ -162,6 +166,10 @@ input[type="submit"]:hover {
     margin-top: 50px;
   }
 
+  .location h1 {
+    font-size: 1.5rem;
+  }
+
   .status-report-and-translation span {
     font-size: 2.5rem;
   }
@@ -187,7 +195,7 @@ input[type="submit"]:hover {
   .status-report-and-translation span {
     font-size: 2rem;
   }
-  
+
   .date {
     font-size: 0.5rem;
   }
