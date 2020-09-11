@@ -9,6 +9,22 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+header {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #2d4059;
+  font-size: 2.5rem;
+  line-height: 2rem;
+  padding-top: 5%;
+}
+
+header span {
+  background-color: #2d4059;
+  font-size: 1.5rem;
+  padding: 0  15px 0 5px;
+
+}
+
 video {
   object-fit: cover;
   width: 100vw;
@@ -22,8 +38,8 @@ video {
   position: relative;
   background: linear-gradient(
     0deg,
-    rgba(229, 229, 229, 0.4),
-    rgba(229, 229, 229, 0.4)
+    rgba(222,205,195, 0.9),
+    rgba(222,205,195, 0.9)
   );
   height: 100vh;
 }
@@ -31,7 +47,10 @@ video {
   width: 600px;
   margin: 0 auto;
 }
+.location {
+  text-align: center;
+}
 
-input [text] {
-  color: wheat;
+input[type=text] {
+  width: 100%;
 }
