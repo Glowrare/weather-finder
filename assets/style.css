@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  color: white;
+  color: #decdc3;
 }
 
 body {
@@ -108,18 +108,24 @@ input[type=submit]:hover {
   margin-top: 5%;
 }
 
-.status-report {
+.status-metric {
+ font-weight: 400;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #decdc3; 
+}
+
+
+.status-report-and-translation span {
   font-size: 4rem;
   font-weight: 900;
   line-height: 0;
+  font-style: normal;
   color: #ea5455;
 }
 
-.status-report span {
-  font-weight: 400;
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #decdc3;
+.weather-translation {
+  text-transform: capitalize;
 }
 
 .date-and-variance-report {
@@ -131,6 +137,10 @@ input[type=submit]:hover {
 }
 
 .high-and-low {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: #ea5455;
+}
+
+.date-and-variance-report span {
   color: #ea5455;
 }

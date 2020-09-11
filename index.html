@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" href="favicon.ico">
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;700&family=Roboto:ital@0;1&display=swap"
       rel="stylesheet"
@@ -27,20 +28,20 @@
         <header class="header-logo">Weather <br /><span>finder</span></header>
         <div class="content-wrapper">
           <div class="location">
-            <h1><i class="fas fa-map-pin"></i> Ibadan, NG</h1>
+            <h1><i class="fas fa-map-pin"></i> <span class="location-name"> Ibadan </span>, <span class="location-country">NG</span></h1>
           </div>
           <div class="weather-search-box">
-            <input type="text" id="" placeholder="Enter a city..." />
-            <input type="submit" value="Search" />
+            <input type="text" id="" placeholder="Enter a city..." class="location-input"/>
+            <input type="submit" value="Search" class="search-log"/>
           </div>
           <div class="weather-details-display">
             <div class="status-report-and-translation">
-              <p class="status-report">17<span>℃</span></p>
+              <p class="status-metric"><span class="status-report">17</span>℃</span></p>
               <p class="weather-translation">Thunderstorm</p>
             </div>
             <div class="date-and-variance-report">
-              <p>Friday, 16th September, 2020</p>
-              <p class="high-and-low">17℃/12℃</p>
+              <p class="date">Friday, 16th September, 2020</p>
+              <p class="high-and-low"><span class="high-temp">17</span>℃/<span class="low-temp">12</span>℃</p>
             </div>
           </div>
         </div>
