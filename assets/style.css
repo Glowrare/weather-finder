@@ -38,8 +38,8 @@ video {
   position: relative;
   background: linear-gradient(
     0deg,
-    rgba(222,205,195, 0.9),
-    rgba(222,205,195, 0.9)
+    rgba(27, 11, 1, 0.9),
+    rgba(27, 11, 1, 0.9)
   );
   height: 100vh;
 }
@@ -51,6 +51,37 @@ video {
   text-align: center;
 }
 
+.weather-search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 input[type=text] {
   width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: #3f4d61;
+  box-shadow: 1px 7px 1px 0px #e5e5e548;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+input[type=text]:focus {
+  background-color: #2d4059;
+  box-shadow: 1px 7px 1px 0px #e5e5e57a;
+}
+
+input[type=submit] {
+  width: 20%;
+  padding: 5px;
+  color: #2d4059;
+  border-radius: 20px;
+  outline: none;
+  background-color: #decdc3;
+  text-transform: uppercase;
+  font-weight: bold;
 }
