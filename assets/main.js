@@ -1,12 +1,12 @@
-var searchLog = document.querySelector(".search-log");
-var locationInput = document.querySelector(".location-input");
-var locationName = document.querySelector(".location-name");
-var locationCountry = document.querySelector(".location-country");
-var weatherTranslation = document.querySelector(".weather-translation");
-var statusReport = document.querySelector(".status-report");
-var date = document.querySelector(".date");
-var highTemp = document.querySelector(".high-temp");
-var lowTemp = document.querySelector(".low-temp");
+let searchLog = document.querySelector(".search-log");
+let locationInput = document.querySelector(".location-input");
+let locationName = document.querySelector(".location-name");
+let locationCountry = document.querySelector(".location-country");
+let weatherTranslation = document.querySelector(".weather-translation");
+let statusReport = document.querySelector(".status-report");
+let date = document.querySelector(".date");
+let highTemp = document.querySelector(".high-temp");
+let lowTemp = document.querySelector(".low-temp");
 
 searchLog.addEventListener("click", function () {
   fetch(
@@ -16,21 +16,56 @@ searchLog.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-        var nameValue = data['name'];
-        var tempValue = data ['main']['temp'];
-        var descValue = data['weather'][0]['description'];
-        var highValue = data['main']['temp_max'];
-        var lowValue = data['main']['temp_min'];
-        var countryValue = data['sys']['country'];
+      let nameValue = data["name"];
+      let tempValue = data["main"]["temp"];
+      let descValue = data["weather"][0]["description"];
+      let highValue = data["main"]["temp_max"];
+      let lowValue = data["main"]["temp_min"];
+      let countryValue = data["sys"]["country"];
 
-        locationName.innerHTML = nameValue;
-        statusReport.innerHTML = tempValue;
-        weatherTranslation.innerHTML = descValue;
-        highTemp.innerHTML = highValue;
-        lowTemp.innerHTML = lowValue;
-        locationCountry.innerHTML = countryValue;
-
+      locationName.innerHTML = nameValue;
+      statusReport.innerHTML = tempValue;
+      weatherTranslation.innerHTML = descValue;
+      highTemp.innerHTML = highValue;
+      lowTemp.innerHTML = lowValue;
+      locationCountry.innerHTML = countryValue;
+      let now = new Date();
+      let date = document.querySelector(".date");
+      date.innerText = dateBuilder(now);
     })
 
     .catch((err) => alert("Wrong city name!"));
 });
+
+function dateBuilder(d) {
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+
+  return `${day} ${date} ${month} ${year}`;
+}
