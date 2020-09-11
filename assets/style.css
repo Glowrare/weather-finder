@@ -18,8 +18,10 @@ header {
   padding-top: 5%;
 }
 
+
 header span {
   background-color: #2d4059;
+  color: #decdc3;
   font-size: 1.5rem;
   padding: 0  15px 0 5px;
 
@@ -49,6 +51,14 @@ video {
 }
 .location {
   text-align: center;
+}
+
+.location h1 {
+  color: #decdc3;
+}
+
+.location i {
+  color: #ea5455;
 }
 
 .weather-search-box {
@@ -84,4 +94,43 @@ input[type=submit] {
   background-color: #decdc3;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: #ea5455;
+  color: #decdc3;
+}
+
+.status-report-and-translation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 5%;
+}
+
+.status-report {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 0;
+  color: #ea5455;
+}
+
+.status-report span {
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #decdc3;
+}
+
+.date-and-variance-report {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: -40px;
+  font-size: 0.8rem;
+}
+
+.high-and-low {
+  font-size: 1.5rem;
+  color: #ea5455;
 }
