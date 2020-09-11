@@ -153,13 +153,17 @@ input[type="submit"]:hover {
     width: 450px;
   }
 
-  .content-wrapper{
+  .content-wrapper {
     width: 90%;
   }
 
   .location {
     text-align: left;
     margin-top: 50px;
+  }
+
+  .status-report-and-translation span {
+    font-size: 2.5rem;
   }
 
   .date {
@@ -172,7 +176,7 @@ input[type="submit"]:hover {
     width: 300px;
   }
 
-  .content-wrapper{
+  .content-wrapper {
     width: 90%;
   }
 
@@ -183,6 +187,7 @@ input[type="submit"]:hover {
   .status-report-and-translation span {
     font-size: 2rem;
   }
+  
   .date {
     font-size: 0.5rem;
   }
