@@ -7,6 +7,7 @@ let statusReport = document.querySelector(".status-report");
 let date = document.querySelector(".date");
 let highTemp = document.querySelector(".high-temp");
 let lowTemp = document.querySelector(".low-temp");
+let weatherIcon = document.querySelector(".weather-icon");
 
 searchLog.addEventListener("click", function () {
   fetch(
@@ -22,6 +23,7 @@ searchLog.addEventListener("click", function () {
       let highValue = data["main"]["temp_max"];
       let lowValue = data["main"]["temp_min"];
       let countryValue = data["sys"]["country"];
+      let icon = data["weather"][0]["icon"];
 
       locationName.innerHTML = nameValue;
       statusReport.innerHTML = tempValue;
@@ -29,6 +31,7 @@ searchLog.addEventListener("click", function () {
       highTemp.innerHTML = highValue;
       lowTemp.innerHTML = lowValue;
       locationCountry.innerHTML = ` , ${countryValue}`;
+      weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png">`
       let now = new Date();
       let date = document.querySelector(".date");
       date.innerText = dateBuilder(now);
